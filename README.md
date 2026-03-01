@@ -1,6 +1,10 @@
 # RingZero
 # 🤖 RingZero AI Assistant
 
+<a href="https://github.com/anuraghazra/github-readme-stats/graphs/contributors">
+  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/DigitalDog1/RingZero" />
+</a>
+
 *[Read in Russian (Русский текст ниже) 🇷🇺](#-ringzero-ai-assistant-ru)*
 
 **RingZero** is a powerful personal AI assistant for Windows that goes beyond simply answering questions — it actively interacts with your operating system. It operates as a single portable `.exe` file, requires no complex installation, and supports any neural networks compatible with the OpenAI API format (e.g., ChatGPT, Qwen, local models, OpenRouter, etc.).
