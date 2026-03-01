@@ -8,8 +8,8 @@
   <a href="https://github.com/DigitalDog1/RingZero/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/DigitalDog1/RingZero?color=0088ff" />
   </a>
-  <a href="https://github.com/anuraghazra/github-readme-stats/pulls">
-    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/anuraghazra/github-readme-stats?color=0088ff" />
+  <a href="https://github.com/DigitalDog1/RingZero/pulls">
+    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/DigitalDog1/RingZero?color=0088ff" />
   </a>
 </p>
 
