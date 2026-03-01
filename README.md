@@ -1,6 +1,8 @@
 # RingZero
 # 🤖 RingZero AI Assistant
 
+<p>[VirusTotal](https://www.virustotal.com/gui/file/c1e93c0c9b11bd95e2d0df44304447c3caac29f36e40f094430ad3e96b91f523/detection)</p>
+
 <p align="center">
   <a href="https://github.com/DigitalDog1/RingZero/graphs/contributors">
     <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/DigitalDog1/RingZero" />
