@@ -21,6 +21,8 @@
 
 [VirusTotal](https://www.virustotal.com/gui/file/c1e93c0c9b11bd95e2d0df44304447c3caac29f36e40f094430ad3e96b91f523/detection)
 
+[Q&A](https://github.com/DigitalDog1/RingZero/issues/2)
+
 📥 **[DOWNLOAD THE LATEST VERSION (EXE)](https://github.com/DigitalDog1/RingZero/releases)**  
 
 ---
