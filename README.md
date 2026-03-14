@@ -1,145 +1,373 @@
-# RingZero
-# 🤖 RingZero AI Assistant
+# 🎉 RingZero v1.0 - Полный редизайн
 
-<p align="center">
-  <a href="https://github.com/DigitalDog1/RingZero/graphs/contributors">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/DigitalDog1/RingZero" />
-  </a>
-  <a href="https://github.com/DigitalDog1/RingZero/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/DigitalDog1/RingZero?color=0088ff" />
-  </a>
-  <a href="https://github.com/DigitalDog1/RingZero/pulls">
-    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/DigitalDog1/RingZero?color=0088ff" />
-  </a>
-</p>
-
-*[Read in Russian (Русский текст ниже) 🇷🇺](#-ringzero-ai-assistant-ru)*
-
-**RingZero** is a powerful personal AI assistant for Windows that goes beyond simply answering questions — it actively interacts with your operating system. It operates as a single portable `.exe` file, requires no complex installation, and supports any neural networks compatible with the OpenAI API format (e.g., ChatGPT, Qwen, local models, OpenRouter, etc.).
-
-
-
-[VirusTotal](https://www.virustotal.com/gui/file/c1e93c0c9b11bd95e2d0df44304447c3caac29f36e40f094430ad3e96b91f523/detection)
-
-[Q&A](https://github.com/DigitalDog1/RingZero/issues/2)
-
-📥 **[DOWNLOAD THE LATEST VERSION (EXE)](https://github.com/DigitalDog1/RingZero/releases)**  
+> **Это ПОЛНАЯ архитектурная переработка с нуля.** Каждый компонент был переписан с самого начала для повышения производительности, надежности и удобства использования.
 
 ---
 
-## ✨ What can RingZero do?
+## 🇷🇺 v1.0
 
-Unlike standard chatbots, RingZero has access to your system through secure tools. You can ask it to:
+### ✨ Что изменилось?
 
-*   **📂 Manage files:** Create, read, edit, and delete files on your PC.
-*   **💻 Launch apps & games:** Ask it to open your favorite game or program. If the assistant doesn't know the path, it will prompt you once and remember it forever.
-*   **🌐 Web search:** Quickly search the internet using DuckDuckGo directly in the chat window, without opening a browser.
-*   **📊 Create presentations:** Say "Make a presentation about space", and RingZero will generate a ready-to-use `.pptx` file *(experimental)*.
-*   **⏰ Set timers and tasks:** "Remind me in 15 minutes to check my email" — the agent will track the time and execute the task or notify you.
-*   **👁️ Image analysis:** Attach an image (📎 button), and if your chosen model supports Vision, the assistant will describe it or solve problems based on the photo.
-*   **🐍 Write and execute code:** The assistant can write Python scripts, create small games, and generate instructions on how to run them.
+Это не просто обновление — это **полное переложение всей архитектуры**. RingZero теперь:
+- Лучше понимает вас на вашем языке
+- Быстрее выполняет команды
+- Надежнее работает с файлами и системой
+- Красивее выглядит и приятнее использовать
 
 ---
 
-## 🚀 Quick Start Guide
+## 🎨 Новый Интерфейс
 
-RingZero is portable and ready to use out of the box, but it requires an API connection to an LLM provider to "think".
+#### Переработанный UI с современным дизайном
 
-### Step 1: Installation
-1. Go to the [Releases](https://github.com/DigitalDog1/RingZero/releases) section.
-2. Download the `RingZero.exe` file.
-3. Place it in any convenient folder on your PC and run it (no installation required).
-
-### Step 2: API Setup
-Upon first launch, you need to connect a neural network:
-1. Click the gear icon (⚙️) in the top right corner of the interface.
-2. Enter your **API Key** and **Base URL** from your preferred provider (OpenAI, OpenRouter, Groq, VLLM, etc.).
-3. In the "Models" section, click "+ Model" and add the exact names of the models you plan to use (e.g., `gpt-4o`, `qwen-vl-max`).
-4. Click "Save all".
-
-### Step 3: Start Chatting
-Select the desired model from the top dropdown list, type your request in the bottom field, and click "Execute" (or press Enter).
+```
+💻 Примеры команд:
+  • "Создай на рабочем столе файл notes.txt и запиши рецепт"
+  • "Запусти игру [Название]"
+  • "Найди последние новости про ИИ"
+```
 
 ---
 
-## 💡 Example Commands
+## 🤖 Новая Архитектура Agent'а
 
-Try typing these requests into the chat:
-*   *"Find the latest news about Artificial Intelligence."*
-*   *"Create a notes.txt file on the desktop and write a pancake recipe in it."*
-*   *"Launch the game [Game Name]."*
-*   *"Make a 5-slide presentation about the history of Ancient Rome."*
-*   *"Set a timer for 10 minutes, and then tell me a joke."*
+#### Улучшенное распознавание инструментов
+- **7 различных парсеров** вместо одного (лучше понимает ваши команды)
+- **Максимум 8 итераций** за один запрос (может делать несколько операций подряд)
+- **Правильный контекст** в истории диалога
 
----
+#### Ask Mode — Режим Подтверждения ✅
+Включите "Ask Mode" в настройках, и ИИ будет просить разрешение перед критичными операциями:
 
-## ⚙️ Session & Memory Management
-*   **History Auto-Save:** All your chats are automatically saved. You can switch between them using the left panel.
-*   **Directory Memory:** If you frequently ask the agent to open files from specific folders, you can manually add these paths in Settings (⚙️) under the "Directories" tab.
+```
+👤 Вы: "Удали файл data.txt"
+🤖 RingZero:
+   ┌───────────────────────────────────┐
+   │                                   │
+   │ Вы просите удалить файл: data.txt │
+   │ [Разрешить] [Отклонить]           │
+   │                                   │
+   └───────────────────────────────────┘
+```
 
-*RingZero is currently in active development (Beta). Some features, like presentation generation, are experimental.*
-
-<br><br>
-
----
----
-
-# 🤖 RingZero AI Assistant (RU)
-
-**RingZero** — это мощный персональный ИИ-ассистент для Windows, который не просто отвечает на ваши вопросы, но и умеет управлять вашим компьютером. Он работает как единый `.exe` файл, не требует сложной установки и поддерживает любые нейросети, совместимые с OpenAI API (например, ChatGPT, Qwen, локальные модели и другие).
-
-📥 **[СКАЧАТЬ ПОСЛЕДНЮЮ ВЕРСИЮ (EXE)](https://github.com/DigitalDog1/RingZero/releases)**  
-
----
-
-## ✨ Что умеет RingZero?
-
-В отличие от обычных чат-ботов, RingZero имеет доступ к системе через безопасные инструменты (Tools). Вы можете попросить его:
-
-*   **📂 Управлять файлами:** Создавать, читать, редактировать и удалять файлы на вашем ПК.
-*   **💻 Запускать программы и игры:** Попросите открыть любимую игру или программу. Если ассистент не знает путь, он попросит вас указать его один раз и запомнит навсегда.
-*   **🌐 Искать в интернете:** Быстрый поиск актуальной информации через DuckDuckGo прямо в окне чата, без открытия браузера.
-*   **📊 Создавать презентации:** Скажите «Сделай презентацию о космосе», и RingZero сгенерирует готовый файл `.pptx` *(тестовая функция)*.
-*   **⏰ Ставить таймеры и задачи:** «Напомни мне через 15 минут проверить почту» — агент отследит время и выполнит задачу или пришлет уведомление.
-*   **👁️ Анализировать картинки:** Прикрепите изображение (кнопка 📎), и если ваша модель поддерживает зрение (Vision), ассистент опишет его или найдет решение по фото.
-*   **🐍 Писать и выполнять код:** Ассистент может писать Python-скрипты, создавать небольшие игры и генерировать инструкции по их запуску.
+Особенно полезно для операций типа:
+- ❌ Удаление файлов
+- 🔌 Выключение ПК
+- 📧 Отправка писем
+- 💾 Управление дисками
 
 ---
 
-## 🚀 Как начать пользоваться (Быстрый старт)
+## 🛠️ 22 Встроенных Инструмента
 
-RingZero портативен и готов к работе прямо из коробки, но для работы интеллекта ему нужен доступ к API нейросети.
+### 📂 Работа с Файлами
+```
+create_file      — Создавать файлы и папки
+read_file        — Читать содержимое
+edit_file        — Редактировать текст в файле
+delete_file      — Удалять файлы
+rewrite_file     — Полностью переписать файл
+list_directory   — Показать содержимое папки
+```
 
-### Шаг 1: Установка
-1. Перейдите в раздел [Releases](https://github.com/DigitalDog1/RingZero/releases).
-2. Скачайте файл `RingZero.exe`.
-3. Поместите его в любую удобную папку на вашем ПК и запустите (установка не требуется).
-
-### Шаг 2: Настройка API
-При первом запуске вам нужно подключить нейросеть:
-1. Нажмите на иконку шестеренки (⚙️) в правом верхнем углу интерфейса.
-2. Введите ваш **API Key** и **Base URL** от любого удобного провайдера (OpenAI, OpenRouter, Groq, VLLM и т.д.).
-3. В разделе «Модели» нажмите «+ Модель» и добавьте названия моделей, которые вы планируете использовать (например, `gpt-4o`, `qwen-vl-max` и т.д.).
-4. Нажмите «Сохранить всё».
-
-### Шаг 3: Общение
-Выберите нужную модель в выпадающем списке сверху, напишите запрос в нижнее поле и нажмите «Выполнить» (или Enter).
+**Пример:** *"Создай на рабочем столе файл notes.txt и запиши туда рецепт шарлотки"*
 
 ---
 
-## 💡 Примеры команд
+### 💻 Управление Системой
+```
+run_command         — Запустить команду (cmd, PowerShell)
+run_in_new_window   — Открыть новое окно и выполнить команду
+close_process       — Закрыть приложение по названию
+get_system_info     — Получить инфо о ПК (CPU, RAM, Диски)
+```
 
-Попробуйте написать в чат следующие запросы:
-*   *"Найди в интернете последние новости про искусственный интеллект."*
-*   *"Создай на рабочем столе файл notes.txt и запиши туда рецепт шарлотки."*
-*   *"Запусти игру [Название игры]."*
-*   *"Сделай презентацию на 5 слайдов об истории Древнего Рима."*
-*   *"Поставь таймер на 10 минут, а потом напиши мне шутку."*
+**Пример:** *"Какой у меня объем оперативной памяти?"* или *"Закрой Telegram"*
 
 ---
 
-## ⚙️ Управление сессиями и памятью
-*   **Сохранение истории:** Все ваши чаты автоматически сохраняются. Вы можете переключаться между ними в левой панели.
-*   **Память директорий:** Если вы часто просите открыть файлы из конкретных папок, вы можете заранее добавить эти пути в Настройках (⚙️) во вкладке "Директории".
+### 🌐 Сеть & Интернет
+```
+network_ping    — Проверить доступность сайта
+network_scan    — Найти устройства в локальной сети
+open_url        — Открыть ссылку в браузере
+```
 
-*RingZero находится в стадии активной разработки (Beta). Некоторые функции, такие как генерация презентаций, могут работать в тестовом режиме.*
+**Пример:** *"Пингани google.com"* или *"Какие устройства подключены к моей WiFi?"*
+
+---
+
+### ⚡ Питание & Управление
+```
+manage_power    — Выключить, перезагрузить, режим сна
+                  (с поддержкой задержки: "через 30 минут")
+```
+
+**Пример:** *"Выруби ПК через 30 минут"* или *"Перезагрузись прямо сейчас"*
+
+---
+
+### 📦 Архивы & Бэкапы
+```
+archive_files    — Zip/Unzip файлы (с паролями!)
+backup_directory — Создать бэкап папки (с временной меткой)
+```
+
+**Пример:** *"Заархивируй папку 'Documents' паролем 123456"*
+
+---
+
+### 📧 Почта (SMTP)
+```
+send_email  — Отправить письмо от вашего имени
+```
+
+**Пример:** *"Отправь письмо на example@mail.com с темой 'Привет' и текстом 'Как дела?'"*
+
+---
+
+### 🔍 Поиск Файлов
+```
+find_path     — Найти файл по имени в быстрых папках
+find_all_dir  — Поиск ПО ВСЕМ ДИСКАМ (медленнее, но полнее)
+```
+
+**Пример:** *"Найди все .mp3 файлы на компьютере"*
+
+---
+
+### ⏰ Утилиты
+```
+set_timer          — Таймер/Напоминание ("через 15 минут")
+execute_python     — Выполнить Python код
+schedule_task      — Запланировать задачу на позже
+create_presentation — Создать .pptx презентацию
+```
+
+**Пример:**
+- *"Напомни мне через 15 минут проверить почту"*
+- *"Сделай презентацию про космос на 5 слайдов"*
+- *"Напиши Python скрипт для парсинга сайта"*
+
+---
+
+### ⚙️ Конфигурация
+```
+add_saved_directory — Добавить папку в "избранное"
+```
+
+---
+
+### Что улучшилось?
+- ✅ **Поддержка API провайдеров:** OpenAI, Anthropic, OpenRouter, Groq, VLLM и т.д.
+- ✅ **Локальные модели:** Ollama
+- ✅ **Безопасность:** Защита от повреждения конфига
+- ✅ **Быстрый доступ:** Сохраненные папки и URL'ы
+
+---
+
+## 📝 Как обновиться?
+
+1. Скачайте новый `RingZero.exe` из [Releases](https://github.com/DigitalDog1/RingZero/releases) или на нашем [Сайте](https://ringzero.vercel.app/). Также есть возможность обновиться через само приложение.
+2. Замените старый файл на новый
+3. Запустите
+
+> ℹ️ Все ваши чаты и настройки будут сохранены.
+
+---
+
+## 🙏 Спасибо!
+
+Спасибо за использование **RingZero**! Ваши отзывы и предложения помогают делать приложение лучше.
+
+📧 Проблемы? → [GitHub Issues](https://github.com/DigitalDog1/RingZero/issues)
+⭐ Нравится? → [Поставьте Star](https://github.com/DigitalDog1/RingZero)
+
+---
+
+---
+
+# 🎉 RingZero v1.0 - Complete Redesign
+
+> **This is a COMPLETE architectural redesign from scratch.** Every component has been rewritten from the ground up for better performance, reliability, and user experience.
+
+---
+
+## 🇬🇧 v1.0
+
+### ✨ What's changed?
+
+This isn't just an update—it's a complete redesign of the entire architecture. RingZero now:
+- Understands you better in your language
+- Executes commands faster
+- Works more reliably with files and the system
+- Looks better and is more pleasant to use
+
+---
+
+## 🎨 New Interface
+
+#### Redesigned UI with a modern design
+
+```
+💻 Example commands:
+• "Create a notes.txt file on your desktop and write down a recipe"
+• "Launch the game [Name]"
+• "Find the latest news about AI"
+```
+
+---
+
+## 🤖 New Agent Architecture
+
+#### Improved tool recognition
+- **7 different parsers** instead of one (better understands your commands)
+- **Maximum of 8 iterations** per request (can perform multiple operations in a row)
+- **Correct context** in conversation history
+
+#### Ask Mode — Confirmation Mode ✅
+Enable "Ask Mode" in the settings, and the AI ​​will ask for permission before critical operations:
+
+```
+👤 You: "Delete the file data.txt"
+🤖 RingZero:
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│ You are requesting to delete the file: data.txt │
+│ [Allow] [Decline]                               │
+│                                                 │
+└─────────────────────────────────────────────────┘
+```
+
+Especially useful for operations like:
+- ❌ Deleting files
+- 🔌 Shutting down a PC
+- 📧 Sending emails
+- 💾 Disk Management
+
+---
+
+## 🛠️ 22 Built-in Tools
+
+### 📂 Working with Files
+```
+create_file — Create files and folders
+read_file — Read contents
+edit_file — Edit text in a file
+delete_file — Delete files
+rewrite_file — Completely rewrite a file
+list_directory — Show folder contents
+```
+
+**Example:** *"Create a file named notes.txt on your desktop and add the Charlotte recipe there"*
+
+---
+
+### 💻 System Management
+```
+run_command — Run a command (cmd, PowerShell)
+run_in_new_window — Open a new window and run the command
+close_process — Close an application by name
+get_system_info — Get PC information (CPU, RAM, Disks)
+```
+
+**Example:** *"How much RAM do I have?"* or *"Close Telegram"*
+
+---
+
+### 🌐 Network & Internet
+```
+network_ping — Check website availability
+network_scan — Find devices on the local network
+open_url — Open a link in Browser
+```
+
+**Example:** *"Ping google.com"* or *"Which devices are connected to my WiFi?"*
+
+---
+
+### ⚡ Power & Management
+```
+manage_power — Shut down, restart, sleep
+(with delay support: "in 30 minutes")
+```
+
+**Example:** *"Shut down your PC in 30 minutes"* or *"Restart now"*
+
+---
+
+### 📦 Archives & Backups
+```
+archive_files — Zip/Unzip files (with passwords!)
+backup_directory — Create a backup of a folder (with a timestamp)
+```
+
+**Example:** *"Zip the 'Documents' folder with the password 123456"*
+
+---
+
+### 📧 Mail (SMTP)
+```
+send_email — Send an email on your behalf
+```
+
+**Example:** *"Send an email to example@mail.com with the subject 'Hello' and the text 'How are you?'"*
+
+---
+
+### 🔍 File Search
+```
+find_path — Find a file by name in Quick Folders
+find_all_dir — Search ALL DRIVES (slower, but more complete)
+```
+
+**Example:** *"Find all .mp3 files on your computer"*
+
+---
+
+### ⏰ Utilities
+```
+set_timer — Timer/Reminder ("in 15 minutes")
+execute_python — Execute Python code
+schedule_task — Schedule a task for later
+create_presentation — Create a .pptx presentation
+```
+
+**Example:**
+- *"Remind me to check my email in 15 minutes"*
+- *"Make a 5-slide presentation about space"*
+- *"Write a Python script to parse a website"*
+
+---
+
+### ⚙️ Configuration
+```
+add_saved_directory — Add a folder to "favorites"
+```
+
+---
+
+### What's improved?
+- ✅ **API provider support:** OpenAI, Anthropic, OpenRouter, Groq, VLLM, etc.
+- ✅ **Local models:** Ollama
+- ✅ **Security:** Protection against config corruption
+- ✅ **Quick access:** Saved folders and URLs
+
+---
+
+## 📝 How to update?
+
+1. Download the new `RingZero.exe` from [Releases](https://github.com/DigitalDog1/RingZero/releases) or from our [Website](https://ringzero.vercel.app/). You can also update it through the app itself.
+2. Replace the old file with the new one.
+3. Run
+
+> ℹ️ All your chats and settings will be saved.
+
+---
+
+## 🙏 Thank you!
+
+Thank you for using **RingZero**! Your feedback and suggestions help us make the app better.
+
+📧 Problems? → [GitHub Issues](https://github.com/DigitalDog1/RingZero/issues)
+⭐ Like it? → [Put Star](https://github.com/DigitalDog1/RingZero)
